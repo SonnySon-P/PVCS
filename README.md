@@ -1,4 +1,4 @@
-# Simple Version Control Software
+# Simple Personal Version Control Software
 
 基於Linux環境開發的簡單防毒毒軟體框架(無病毒碼)。
 
@@ -34,7 +34,7 @@
 將一個編譯好的執行檔放置到`bin`資料夾並設置好環境路徑，步驟如下：
 ***步驟1: 編譯Golang，生成一個名為`vm`的執行檔。
 ```bash
-go build -o vm main.go
+go build -o vcs main.go
 ```
 
 ***步驟 2: 將執行檔放到`bin`資料夾
@@ -61,14 +61,16 @@ export PATH=$PATH:~/bin
 
 **二、運行程式方式：**
 ```bash
-vm -load <path>  #  載入映像檔，將指定的映像檔解壓到容器目錄中
-vm -save <path>  #  將當前容器保存為新映像檔
-vm -create <path>  #  從映像檔創建容器
-vm -start <containerID>  #  啟動容器
-vm -stop <containerID>  #  停止容器
-vm -delete <containerID>  #  刪除容器
+vcs init  # 初始化與設定版本控制
+vcs add <filename>  #  將檔案新增至暫存區
+vcs commit <filename> <filename>  # 提交文件
+vcs log  # 查詢目前分支，所有版本的資訊
+vcs status  # 查詢目前分支暫存區檔案的狀況
+vcs checkout <version number>  # 切換目前分支下的版本
+vcs create-branch <branch name>  # 創建新的分支
+vcs checkout-branch <branch name>  # 切換不同的分支
+vcs merge <target branch name> <source branch name>  # 合併分支
 ```
-
 
 # VCS
 
