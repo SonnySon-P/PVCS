@@ -46,7 +46,7 @@
 ## 貳、操作說明
 **一、安裝程式方式：** 
 將一個編譯好的執行檔放置到`bin`資料夾並設置好環境路徑，步驟如下：
-***步驟1: 編譯Golang，生成一個名為`vm`的執行檔。
+***步驟1: 編譯Golang，生成一個名為`vcs`的執行檔。
 ```bash
 go build -o vcs main.go
 ```
@@ -55,11 +55,11 @@ go build -o vcs main.go
 請在UNIX類系統(如Linux或macOS)中，將執行檔放到`/usr/local/bin`或`~/bin` 通常是用來存放可執行檔的目錄。
 ```bash
 mkdir -p ~/bin
-mv vm ~/bin/
+mv vcs ~/bin/
 ```
 
 ***步驟 3: 設置環境路徑
-接下來，您需要設置您的環境變數，使得系統可以找到您放置的`bin`資料夾。使得可以在任何地方執行`vm`。
+接下來，您需要設置您的環境變數，使得系統可以找到您放置的`bin`資料夾。使得可以在任何地方執行`vcs`。
 
 1. 開啟`.bashrc`或`.zshrc`配置檔(取決於您使用的 shell)，如果使用的是`bash`，需要編輯`~/.bashrc`文件；如果使用的是`zsh`，則是`~/.zshrc`文件。
 ```bash
@@ -94,7 +94,8 @@ repoDir(工作區)
         ├── main
         └── branch
               ├── version_1
-              └── version_2
+              ├── version_2
+              └── version_3
               
 ```
 
